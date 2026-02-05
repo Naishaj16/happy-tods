@@ -20,7 +20,6 @@
     <div class="container">
         <nav>
             <div class="logo">
-                <!-- Reverting to JPG as PNG was not visible (likely contrast issue) -->
                 <img src="assets/images/logo.jpg" alt="Happy Tods Logo">
             </div>
             <ul class="nav-links">
@@ -35,6 +34,9 @@
 
     <!-- Hero Section -->
     <header class="hero">
+        <div class="hero-bg">
+            <img src="assets/images/hero_cute.png" alt="Cute Preschool Background">
+        </div>
         <div class="container hero-content">
             <h1>Create a Safe and Fun Environment for Learning!</h1>
             <p>A home away from home. Intellectually nurturing and growing each child to their full potential.</p>
@@ -47,54 +49,51 @@
 
     <!-- About / Mission -->
     <section class="section container" id="about">
-        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-            <h2 style="font-size: 2.5rem; color: var(--primary-teal); margin-bottom: 20px;">Welcome to Happy Tods! 🌞
-            </h2>
-            <p style="font-size: 1.2rem;">
+        <div class="box-card" style="text-align: center; max-width: 900px; margin: 0 auto;">
+            <h2 class="section-title">Welcome to Happy Tods! 🌞</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 30px;">
                 Happy Tods is a child-centric centre in <strong>Perambur, Chennai</strong>.
                 We operate Preschool (9:00 - 12:30) and Daycare (9:00 AM - 7:00 PM).
                 <br><br>
                 Our goal is to create a safe, fun, and intellectually stimulating environment where every child feels at
                 home.
             </p>
+            <img src="assets/images/kids_playing.png" alt="Happy Kids Playing"
+                style="width: 100%; border-radius: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
         </div>
     </section>
 
     <!-- Fast Facts -->
-    <section id="facts" class="section" style="background-color: #fff9e6;">
+    <section id="facts" class="section" style="background-color: var(--primary-purple);">
         <div class="container">
-            <h2 style="text-align: center; color: var(--primary-orange); margin-bottom: 30px;">🚀 Fast Facts</h2>
+            <h2 class="section-title">🚀 Fast Facts</h2>
 
-            <div class="fast-facts">
-                <h3>Operation Details</h3>
-                <div class="fact-grid">
-                    <div class="fact-item">
-                        <span class="fact-label">Established</span>
-                        2021
-                    </div>
-                    <div class="fact-item">
-                        <span class="fact-label">Preschool Time</span>
-                        9:00 - 12:30
-                    </div>
-                    <div class="fact-item">
-                        <span class="fact-label">Daycare Time</span>
-                        9:00 AM - 7:00 PM
-                    </div>
-                    <div class="fact-item">
-                        <span class="fact-label">Ages</span>
-                        1.5 yrs Onwards
-                    </div>
+            <div class="fact-grid">
+                <div class="fact-item">
+                    <span class="fact-label">Established</span>
+                    <h3>2021</h3>
+                </div>
+                <div class="fact-item">
+                    <span class="fact-label">Preschool Time</span>
+                    <h3>9:00 - 12:30</h3>
+                </div>
+                <div class="fact-item">
+                    <span class="fact-label">Daycare Time</span>
+                    <h3>9:00 AM - 7:00 PM</h3>
+                </div>
+                <div class="fact-item">
+                    <span class="fact-label">Ages</span>
+                    <h3>1.5 yrs Onwards</h3>
                 </div>
             </div>
-
-
         </div>
     </section>
 
     <!-- Facilities -->
     <section id="facilities" class="section container">
-        <h2 style="text-align: center; color: var(--primary-teal);">🌈 Our Facilities</h2>
-        <p style="text-align: center; margin-bottom: 40px;">Everything your child needs to be safe and happy.</p>
+        <h2 class="section-title">🌈 Our Facilities</h2>
+        <p style="text-align: center; margin-bottom: 40px; font-size: 1.2rem;">Everything your child needs to be safe
+            and happy.</p>
 
         <div class="facilities-grid">
             <div class="facility-item"><span class="facility-icon">🕒</span> Extended Hours</div>
@@ -111,28 +110,36 @@
     </section>
 
     <!-- Contact / Location -->
-    <section id="contact" class="section" style="background: var(--soft-white);">
+    <section id="contact" class="section" style="background: white;">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: 40px;">Come Visit Us! </h2>
+            <h2 class="section-title">Come Visit Us!</h2>
 
-            <div class="campus-card">
-                <div class="campus-info">
+            <div class="contact-grid">
+                <div class="contact-info-card">
                     <h3>📍 Perambur Campus</h3>
-                    <p style="font-size: 1.1rem; margin: 10px 0;">
+                    <p style="font-size: 1.2rem; margin: 20px 0;">
                         <strong>Villa 46, North Town, Perambur</strong><br>
                         Chennai, Tamil Nadu - 600012
                     </p>
-                    <hr style="margin: 20px 0; border: none; border-top: 1px dashed #ccc;">
-                    <div style="display: grid; gap: 10px;">
+                    <hr style="margin: 20px 0; border: none; border-top: 2px dashed rgba(255,255,255,0.5);">
+                    <div style="display: grid; gap: 15px; font-size: 1.1rem;">
                         <div><strong>📞 Call:</strong> 9566033393 / 96</div>
                         <div><strong>📧 Email:</strong> todshappy@gmail.com</div>
                         <div><strong>👤 Contact Person:</strong> Soujanya Prakash</div>
                     </div>
-                    <div style="margin-top: 20px; display: flex; gap: 15px;">
+                    <div style="margin-top: 30px; display: flex; gap: 15px;">
                         <a href="https://www.instagram.com/happy_tods/?hl=en" target="_blank" class="btn btn-primary"
                             style="background: #E1306C; border: none;">📸 Instagram</a>
-                        <a href="http://www.happytods.in/" target="_blank" class="btn btn-secondary">🌐 Website</a>
+                        <a href="http://www.happytods.in/" target="_blank" class="btn btn-primary"
+                            style="background: #e67e22; border: none;">🌐 Website</a>
                     </div>
+                </div>
+                <!-- Using the hero image as a placeholder for map/campus view since we want "good pictures" -->
+                <div class="contact-img">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.836484393649!2d80.2396!3d13.1098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265e3174246ab%3A0x36853755452f3068!2sNorth%20Town%20Estate%20Adyar%20Ananda%20Bhavan%20A2B!5e0!3m2!1sen!2sin!4v1645000000000!5m2!1sen!2sin"
+                        width="100%" height="450" style="border:0; border-radius: 30px;" allowfullscreen=""
+                        loading="lazy"></iframe>
                 </div>
             </div>
         </div>
@@ -140,9 +147,9 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container text-center" style="text-align: center;">
-            <h2 style="font-family: 'Fredoka';">Happy Tods Binny 🧸</h2>
-            <p>Nurturing and growing each child to their full potential.</p>
+        <div class="container">
+            <h2 style="font-family: 'Fredoka'; font-size: 2.5rem;">Happy Tods Binny 🧸</h2>
+            <p style="font-size: 1.2rem;">Nurturing and growing each child to their full potential.</p>
             <br>
             <p>&copy; 2026 Happy Tods. All Rights Reserved.</p>
         </div>
