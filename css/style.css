@@ -125,7 +125,7 @@ a {
 }
 
 .logo img {
-    height: 60px;
+    height: 90px;
     border-radius: 50%;
     border: 3px solid var(--primary-pink);
 }
@@ -146,6 +146,12 @@ a {
 .nav-links a:hover {
     color: var(--primary-pink);
     transform: rotate(5deg);
+}
+
+/* Override for Contact button in navbar to pop instead of rotate */
+.nav-links .btn:hover {
+    transform: scale(1.1);
+    color: white;
 }
 
 /* --- Hero Section --- */
@@ -266,8 +272,9 @@ a {
 }
 
 .fact-item:hover {
-    background: var(--primary-yellow);
-    transform: translateY(-10px);
+    transform: translateY(-10px) rotate(-2deg) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-yellow);
 }
 
 .fact-label {
