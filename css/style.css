@@ -2,14 +2,16 @@
     /* Nature-Inspired Palette */
     --primary-green: #2C3E50;
     /* Dark Blue/Grey for text */
-    --primary-cream: #FFF8E7;
-    /* Soft Background */
+    --primary-cream: #F5EFEB;
+    /* Lighter Cream/Beige */
+    --primary-blue: #587C95;
+    /* Slate Blue for Difference Section */
     --accent-pink: #F7CAC9;
-    /* Rose Quartz */
     --earth-tone: #E0C9A6;
-    /* Wood / Sand */
     --action-orange: #F39C12;
-    /* Admissions Button - Yellow/Orange */
+    /* Admissions Button */
+    --text-gold: #F4C45E;
+    /* Gold text */
     --soft-white: #FFFFFF;
 
     --text-main: #2C3E50;
@@ -26,44 +28,7 @@
     --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
-/* --- Top Bar --- */
-.top-bar {
-    background-color: #f8f9fa;
-    /* Light Grey */
-    padding: 8px 0;
-    font-size: 0.9rem;
-    border-bottom: 1px solid #eee;
-}
-
-.top-bar-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.contact-details a,
-.social-icons a {
-    margin-right: 20px;
-    color: var(--text-light);
-    /* Dark Text */
-    font-weight: 500;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.contact-details a:hover,
-.social-icons a:hover {
-    color: var(--action-orange);
-}
-
-@media (max-width: 768px) {
-    .top-bar {
-        display: none;
-        /* Hide on mobile for cleaner look */
-    }
-}
+/* --- Top Bar (Removed) --- */
 
 * {
     margin: 0;
@@ -208,99 +173,113 @@ h4 {
     cursor: pointer;
 }
 
-/* --- Hero Section --- */
-.hero {
-    position: relative;
-    min-height: 100vh;
+/* --- Welcome Section --- */
+.welcome-section {
+    padding: 100px 20px;
+    background-color: var(--primary-cream);
+    text-align: center;
     display: flex;
+    justify-content: center;
     align-items: center;
-    padding-top: 80px;
-    /* Offset fixed nav */
-    background: var(--soft-white);
-    overflow: hidden;
+    min-height: 60vh;
 }
 
-.hero-bg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 55%;
-    height: 100%;
-    z-index: 1;
+.welcome-content {
+    max-width: 800px;
 }
 
-.hero-bg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-bottom-left-radius: 100px;
-    /* Soft Curve */
+.welcome-title {
+    font-size: 3rem;
+    color: #555;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-/* Wave overlapping */
-.hero-wave {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 2;
-    transform: rotate(180deg);
-    display: none;
-    /* Hidden for now, simplified design */
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    display: flex;
-}
-
-.hero-text {
-    width: 50%;
-    padding-right: 50px;
-}
-
-.hero-text h1 {
+.welcome-title .highlight-text {
+    font-family: var(--font-heading);
+    color: var(--action-orange);
+    text-transform: lowercase;
     font-size: 4rem;
-    line-height: 1.1;
-    color: var(--primary-green);
-    margin-bottom: 20px;
+    display: inline-block;
+    transform: rotate(-3deg);
 }
 
-.hero-text p {
+.welcome-body p {
     font-size: 1.2rem;
-    color: var(--text-light);
-    margin-bottom: 30px;
-    max-width: 450px;
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.8;
 }
 
-.hero-btns {
-    display: flex;
-    gap: 15px;
+/* --- Difference Section (Blue) --- */
+.difference-section {
+    background-color: var(--primary-blue);
+    padding: 80px 0;
+    color: white;
 }
 
-/* Bottom Curve Shape */
-.custom-shape-divider-bottom-1678901234 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-    z-index: 5;
+.text-gold {
+    color: var(--text-gold) !important;
 }
 
-.custom-shape-divider-bottom-1678901234 svg {
-    position: relative;
+.text-white {
+    color: white !important;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columns for difference items */
+    gap: 30px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.facility-card.transparent {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    border: none;
+}
+
+.facility-card.transparent:hover {
+    transform: translateY(-5px);
+    background: transparent;
+}
+
+.icon-large {
+    font-size: 4rem;
+    margin-bottom: 20px;
     display: block;
-    width: calc(100% + 1.3px);
-    height: 100px;
 }
 
-.custom-shape-divider-bottom-1678901234 .shape-fill {
-    fill: var(--primary-cream);
+.facility-card h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 900px) {
+    .facilities-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .facilities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-title {
+        font-size: 2rem;
+    }
+
+    .welcome-title .highlight-text {
+        font-size: 2.5rem;
+    }
 }
 
 /* --- About Section --- */
