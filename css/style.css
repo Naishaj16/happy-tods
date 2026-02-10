@@ -175,41 +175,66 @@ h4 {
 
 /* --- Welcome Section --- */
 .welcome-section {
-    padding: 100px 20px;
+    padding: 80px 20px;
     background-color: var(--primary-cream);
     text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 60vh;
+    min-height: 70vh;
+    /* More vertical space like the screenshot */
 }
 
 .welcome-content {
-    max-width: 800px;
+    max-width: 900px;
+    /* Wider for the text to breathe */
+    margin: 0 auto;
 }
 
 .welcome-title {
-    font-size: 3rem;
-    color: #555;
+    font-family: var(--font-body);
+    /* Sans-serif for "WELCOME TO" */
+    font-size: 2.5rem;
+    color: #4A4A4A;
     margin-bottom: 40px;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    font-weight: 400;
+    /* Regular weight */
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    /* Space between "WELCOME TO" and "happy tods" */
+    flex-wrap: wrap;
 }
 
 .welcome-title .highlight-text {
     font-family: var(--font-heading);
     color: var(--action-orange);
+    /* Orange/Gold Color */
     text-transform: lowercase;
-    font-size: 4rem;
+    font-size: 5rem;
+    /* Much larger */
+    font-weight: 700;
+    transform: rotate(-5deg);
+    /* Slight rotation */
     display: inline-block;
-    transform: rotate(-3deg);
+    line-height: 0.8;
 }
 
 .welcome-body p {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 25px;
+    font-size: 1.3rem;
+    /* Larger body text */
+    color: #555;
+    /* Soft dark grey */
+    margin-bottom: 30px;
     line-height: 1.8;
+    font-weight: 500;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* --- Difference Section (Blue) --- */
