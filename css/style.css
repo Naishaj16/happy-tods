@@ -1,15 +1,15 @@
 :root {
     /* Nature-Inspired Palette */
-    --primary-green: #88B04B;
-    /* Sage / Nature */
+    --primary-green: #2C3E50;
+    /* Dark Blue/Grey for text */
     --primary-cream: #FFF8E7;
     /* Soft Background */
     --accent-pink: #F7CAC9;
     /* Rose Quartz */
     --earth-tone: #E0C9A6;
     /* Wood / Sand */
-    --action-orange: #FF8BA7;
-    /* Playful Accent */
+    --action-orange: #F39C12;
+    /* Admissions Button - Yellow/Orange */
     --soft-white: #FFFFFF;
 
     --text-main: #2C3E50;
@@ -23,7 +23,46 @@
     /* Spacing & Shapes */
     --radius-md: 20px;
     --radius-lg: 40px;
-    --card-shadow: 0 10px 25px rgba(136, 176, 75, 0.15);
+    --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Top Bar --- */
+.top-bar {
+    background-color: #f8f9fa;
+    /* Light Grey */
+    padding: 8px 0;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #eee;
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-details a,
+.social-icons a {
+    margin-right: 20px;
+    color: var(--text-light);
+    /* Dark Text */
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.contact-details a:hover,
+.social-icons a:hover {
+    color: var(--action-orange);
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        display: none;
+        /* Hide on mobile for cleaner look */
+    }
 }
 
 * {
@@ -85,9 +124,9 @@ h4 {
 }
 
 .btn-primary {
-    background-color: var(--primary-green);
+    background-color: var(--action-orange);
     color: white;
-    border: 2px solid var(--primary-green);
+    border: 2px solid var(--action-orange);
 }
 
 .btn-secondary {
