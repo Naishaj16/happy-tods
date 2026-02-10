@@ -17,136 +17,186 @@
 <body>
 
     <!-- Navigation -->
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="container navbar-content">
             <div class="logo">
                 <img src="assets/images/logo.jpg" alt="Happy Tods Logo">
+                <span class="logo-text">Happy Tods</span>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#facts">Fast Facts</a></li>
                 <li><a href="#facilities">Facilities</a></li>
-                <li><a href="#contact" class="btn btn-primary" style="padding: 10px 25px;">Contact Us</a></li>
+                <li><a href="#contact" class="btn btn-primary nav-cta">Book a Tour</a></li>
             </ul>
+            <div class="mobile-menu-btn">☰</div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero">
+    <header id="home" class="hero">
         <div class="hero-bg">
-            <img src="assets/images/hero_cute.png" alt="Cute Preschool Background">
+            <!-- Organic Wave Top -->
+            <svg class="hero-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#ffffff" fill-opacity="1"
+                    d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,261.3C960,256,1056,224,1152,197.3C1248,171,1344,149,1392,138.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+                </path>
+            </svg>
+            <img src="assets/images/hero_cute.png" alt="Happy Children Learning">
         </div>
         <div class="container hero-content">
-            <h1>Create a Safe and Fun Environment for Learning!</h1>
-            <p>A home away from home. Intellectually nurturing and growing each child to their full potential.</p>
-            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                <a href="#contact" class="btn btn-primary">Enroll Now</a>
-                <a href="#facts" class="btn btn-secondary">Quick Facts</a>
+            <div class="hero-text">
+                <h1>Where Nature Meets Nurture</h1>
+                <p>Welcome to your child's home away from home. A Reggio-inspired space designed for curiosity,
+                    creativity, and joy.</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-primary">Enroll Now</a>
+                    <a href="#about" class="btn btn-secondary">Our Story</a>
+                </div>
             </div>
+        </div>
+
+        <!-- Organic Bottom Curve -->
+        <div class="custom-shape-divider-bottom-1678901234">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
         </div>
     </header>
 
     <!-- About / Mission -->
-    <section class="section container" id="about">
-        <div class="box-card" style="text-align: center; max-width: 900px; margin: 0 auto;">
-            <h2 class="section-title">Welcome to Happy Tods! 🌞</h2>
-            <p style="font-size: 1.3rem; margin-bottom: 30px;">
-                Happy Tods is a child-centric centre in <strong>Perambur, Chennai</strong>.
-                We operate Preschool (9:00 - 12:30) and Daycare (9:00 AM - 7:00 PM).
-                <br><br>
-                Our goal is to create a safe, fun, and intellectually stimulating environment where every child feels at
-                home.
-            </p>
-            <img src="assets/images/kids_playing.png" alt="Happy Kids Playing"
-                style="width: 100%; border-radius: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <span class="badge">Who We Are</span>
+                    <h2 class="section-title">A Space for Happy Childhoods</h2>
+                    <p class="lead">Happy Tods is a loving, child-centric center in <strong>Perambur, Chennai</strong>.
+                    </p>
+                    <p>We believe every child deserves a safe, engaging environment to explore their world. Our
+                        philosophy blends play-based learning with structured activities to nurture intellect and
+                        emotion equally.</p>
+                </div>
+                <div class="about-image">
+                    <img src="assets/images/kids_playing.png" alt="Happy Kids Playing">
+                    <div class="floating-card">
+                        <span>🌟</span> 5+ Years Experience
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Fast Facts -->
-    <section id="facts" class="section" style="background-color: var(--primary-purple);">
+    <section id="facts" class="section facts-section">
         <div class="container">
-            <h2 class="section-title">🚀 Fast Facts</h2>
-
+            <h2 class="section-title text-center">Quick Glance</h2>
             <div class="fact-grid">
-                <div class="fact-item">
-                    <span class="fact-label">Established</span>
-                    <h3>2021</h3>
+                <div class="fact-card">
+                    <div class="fact-icon">📅</div>
+                    <h3>Start Year</h3>
+                    <p>Since 2021</p>
                 </div>
-                <div class="fact-item">
-                    <span class="fact-label">Preschool Time</span>
-                    <h3>9:00 - 12:30</h3>
+                <div class="fact-card">
+                    <div class="fact-icon">☀️</div>
+                    <h3>Preschool</h3>
+                    <p>9:00 AM - 12:30 PM</p>
                 </div>
-                <div class="fact-item">
-                    <span class="fact-label">Daycare Time</span>
-                    <h3>9:00 AM - 7:00 PM</h3>
+                <div class="fact-card">
+                    <div class="fact-icon">🌙</div>
+                    <h3>Daycare</h3>
+                    <p>9:00 AM - 7:00 PM</p>
                 </div>
-                <div class="fact-item">
-                    <span class="fact-label">Ages</span>
-                    <h3>1.5 yrs Onwards</h3>
+                <div class="fact-card">
+                    <div class="fact-icon">👶</div>
+                    <h3>Age Group</h3>
+                    <p>1.5 Years +</p>
                 </div>
             </div>
+        </div>
+
+        <!-- Bottom Wave -->
+        <div class="custom-shape-divider-bottom-wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                    class="shape-fill"></path>
+            </svg>
         </div>
     </section>
 
     <!-- Facilities -->
-    <section id="facilities" class="section container">
-        <h2 class="section-title">🌈 Our Facilities</h2>
-        <p style="text-align: center; margin-bottom: 40px; font-size: 1.2rem;">Everything your child needs to be safe
-            and happy.</p>
-
-        <div class="facilities-grid">
-            <div class="facility-item"><span class="facility-icon">🕒</span> Extended Hours</div>
-            <div class="facility-item"><span class="facility-icon">🍲</span> Fresh Cooked Meals</div>
-            <div class="facility-item"><span class="facility-icon">🚌</span> Transport (Pick/Drop)</div>
-            <div class="facility-item"><span class="facility-icon">📹</span> CCTV Camera</div>
-            <div class="facility-item"><span class="facility-icon">📱</span> Live App for Parents</div>
-            <div class="facility-item"><span class="facility-icon">❄️</span> AC Rooms</div>
-            <div class="facility-item"><span class="facility-icon">🩹</span> Emergency First Aid</div>
-            <div class="facility-item"><span class="facility-icon">👩‍🏫</span> Qualified Teachers</div>
-            <div class="facility-item"><span class="facility-icon">💆</span> Massage & Bathing</div>
-            <div class="facility-item"><span class="facility-icon">🎨</span> Activity Classes</div>
-        </div>
-    </section>
-
-    <!-- Contact / Location -->
-    <section id="contact" class="section" style="background: white;">
+    <section id="facilities" class="section facilities-section">
         <div class="container">
-            <h2 class="section-title">Come Visit Us!</h2>
+            <div class="section-header text-center">
+                <h2 class="section-title">Why Parents Choose Us</h2>
+                <p>Designed with love, safety, and comfort in mind.</p>
+            </div>
 
-            <div class="contact-grid">
-                <div class="contact-info-card">
-                    <h3>📍 Perambur Campus</h3>
-                    <p style="font-size: 1.2rem; margin: 20px 0;">
-                        <strong>Villa 46, North Town, Perambur</strong><br>
-                        Chennai, Tamil Nadu - 600012
-                    </p>
-                    <hr style="margin: 20px 0; border: none; border-top: 2px dashed rgba(255,255,255,0.5);">
-                    <div style="display: grid; gap: 15px; font-size: 1.1rem;">
-                        <div><strong>📞 Call:</strong> 9566033393 / 96</div>
-                        <div><strong>📧 Email:</strong> todshappy@gmail.com</div>
-                        <div><strong>👤 Contact Person:</strong> Soujanya Prakash</div>
-                    </div>
-                    <div style="margin-top: 30px; display: flex; gap: 15px;">
-                        <a href="https://www.instagram.com/happy_tods/?hl=en" target="_blank" class="btn btn-primary"
-                            style="background: #E1306C; border: none;">📸 Instagram</a>
-                        <a href="http://www.happytods.in/" target="_blank" class="btn btn-primary"
-                            style="background: #e67e22; border: none;">🌐 Website</a>
-                    </div>
+            <div class="facilities-grid">
+                <div class="facility-card"><span class="icon">🕒</span>
+                    <h4>Extended Hours</h4>
                 </div>
-                <!-- Using the hero image as a placeholder for map/campus view since we want "good pictures" -->
-                <div class="contact-img">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.836484393649!2d80.2396!3d13.1098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265e3174246ab%3A0x36853755452f3068!2sNorth%20Town%20Estate%20Adyar%20Ananda%20Bhavan%20A2B!5e0!3m2!1sen!2sin!4v1645000000000!5m2!1sen!2sin"
-                        width="100%" height="450" style="border:0; border-radius: 30px;" allowfullscreen=""
-                        loading="lazy"></iframe>
+                <div class="facility-card"><span class="icon">🍲</span>
+                    <h4>Fresh Meals</h4>
+                </div>
+                <div class="facility-card"><span class="icon">🚌</span>
+                    <h4>Transport</h4>
+                </div>
+                <div class="facility-card"><span class="icon">📹</span>
+                    <h4>CCTV Monitored</h4>
+                </div>
+                <div class="facility-card"><span class="icon">📱</span>
+                    <h4>Parent App</h4>
+                </div>
+                <div class="facility-card"><span class="icon">❄️</span>
+                    <h4>AC Rooms</h4>
+                </div>
+                <div class="facility-card"><span class="icon">🩹</span>
+                    <h4>First Aid</h4>
+                </div>
+                <div class="facility-card"><span class="icon">👩‍🏫</span>
+                    <h4>Pro Teachers</h4>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Contact / Location -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2 class="section-title">Visit Our Campus</h2>
+                    <p class="address">
+                        <strong>Happy Tods Binny</strong><br>
+                        Villa 46, North Town, Perambur,<br>
+                        Chennai, Tamil Nadu - 600012
+                    </p>
+                    <div class="contact-methods">
+                        <a href="tel:9566033393" class="contact-item">📞 9566033393</a>
+                        <a href="mailto:todshappy@gmail.com" class="contact-item">📧 todshappy@gmail.com</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/happy_tods/?hl=en" target="_blank"
+                            class="btn btn-social insta">Instagram</a>
+                        <a href="http://www.happytods.in/" target="_blank" class="btn btn-social web">Website</a>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.836484393649!2d80.2396!3d13.1098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265e3174246ab%3A0x36853755452f3068!2sNorth%20Town%20Estate%20Adyar%20Ananda%20Bhavan%20A2B!5e0!3m2!1sen!2sin!4v1645000000000!5m2!1sen!2sin"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
             <h2 style="font-family: 'Fredoka'; font-size: 2.5rem;">Happy Tods Binny 🧸</h2>
@@ -156,6 +206,7 @@
         </div>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 
 </html>
