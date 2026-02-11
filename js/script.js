@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    const animatedElements = document.querySelectorAll('.fact-card, .facility-card, .about-content, .about-image');
+    const animatedElements = document.querySelectorAll('.feature-card, .about-text, .about-decoration, .section-title, .hero-content');
     animatedElements.forEach(el => {
         el.classList.add('fade-in-up');
         observer.observe(el);

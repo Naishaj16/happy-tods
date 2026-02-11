@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Tods | Preschool & Daycare</title>
-    <!-- Google Fonts: Fredoka (Fun), Quicksand (Clean) -->
+    <!-- Google Fonts: Poppins (Headings), Inter (Body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Quicksand:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -25,78 +25,94 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
+                <li><a href="#about">Philosophy</a></li>
                 <li><a href="#programmes">Programmes</a></li>
-                <li><a href="#difference">Happy Difference</a></li>
-                <li><a href="#contact">Our Campuses</a></li>
+                <li><a href="#difference">Why Us</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#contact" class="btn btn-primary nav-cta">Admissions</a></li>
+                <li><a href="#admissions" class="btn btn-primary nav-cta">Admissions</a></li>
             </ul>
             <div class="mobile-menu-btn">☰</div>
         </div>
     </nav>
 
-    <!-- Cartoon Hero Section -->
-    <header id="home" class="cartoon-hero">
-        <div class="sky-elements">
-            <div class="sun"></div>
-            <div class="cloud cloud-1"></div>
-            <div class="cloud cloud-2"></div>
-            <div class="cloud cloud-3"></div>
-        </div>
-        <div class="hero-content">
-            <h1 class="hero-title">Happy Tods <br><span class="sub-title">Where Happy Childhoods Begin!</span></h1>
-        </div>
-        <div class="landscape">
-            <div class="grass"></div>
-            <div class="school-building">
-                <div class="roof"></div>
-                <div class="walls">
-                    <div class="window left"></div>
-                    <div class="door"></div>
-                    <div class="window right"></div>
+    <!-- Warm Welcome Hero Section -->
+    <header id="home" class="hero-section">
+        <div class="container hero-container">
+            <div class="hero-content text-center">
+                <span class="hero-subtitle">Welcome to Happy Tods</span>
+                <h1 class="hero-title">Where Happy Childhoods Begin</h1>
+                <p class="hero-description">Top-quality care and education in a warm, nature-inspired environment.</p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-outline">Our Philosophy</a>
+                    <a href="#admissions" class="btn btn-primary">Join Our Family</a>
                 </div>
             </div>
+        </div>
+        <!-- Decorative Background Elements (Simple shapes/nature motifs) -->
+        <div class="hero-bg-decoration">
+            <div class="circle-deco circle-1"></div>
+            <div class="circle-deco circle-2"></div>
         </div>
     </header>
 
-    <!-- About / Mission (Brief) -->
+    <!-- Philosophy / About Section -->
     <section id="about" class="section about-section">
-        <div class="container text-center">
-            <span class="badge">Happy Tods Perambur</span>
-            <h2 class="section-title">Nurturing Young Minds</h2>
-            <p class="lead">We are a Reggio Emilia inspired early learning center blending global curricular frameworks.
-            </p>
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <span class="badge">Our Philosophy</span>
+                    <h2 class="section-title">Nurturing Young Minds</h2>
+                    <p class="lead">We are a Reggio Emilia inspired early learning center blending global curricular
+                        frameworks.</p>
+                    <p class="body-text">At Happy Tods, we believe that every child is unique and capable. Our
+                        environment is designed to be a "third teacher," encouraging exploration, curiosity, and a love
+                        for learning that lasts a lifetime.</p>
+                </div>
+                <!-- Placeholder for a warm image if available, otherwise structural layout -->
+                <div class="about-decoration">
+                    <div class="deco-box"></div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Why Parents Choose Us (Exact Match) -->
-    <section id="difference" class="section difference-section-exact">
+    <!-- Why Parents Choose Us (Muted Blue Background) -->
+    <section id="difference" class="section difference-section">
         <div class="container">
-            <h2 class="section-title text-center text-yellow">WHY PARENTS CHOOSE US</h2>
+            <h2 class="section-title text-center text-white">Why Parents Choose Us</h2>
 
-            <div class="ekam-grid">
+            <div class="features-grid">
                 <!-- 1. Environment -->
-                <div class="ekam-card">
+                <div class="feature-card">
                     <div class="icon-wrapper">🏡</div>
-                    <h4>HOME-LIKE, NATURE-RICH<br>ENVIRONMENT</h4>
+                    <h4>Home-Like, Nature-Rich Environment</h4>
                 </div>
                 <!-- 2. Curriculum -->
-                <div class="ekam-card">
+                <div class="feature-card">
                     <div class="icon-wrapper">🌈</div>
-                    <h4>A BLEND OF REGGIO AND<br>GLOBAL CURRICULAR FRAMEWORKS</h4>
+                    <h4>Blend of Reggio & Global Frameworks</h4>
                 </div>
                 <!-- 3. Teachers -->
-                <div class="ekam-card">
+                <div class="feature-card">
                     <div class="icon-wrapper">🏅</div>
-                    <h4>HIGHLY EXPERIENCED AND<br>DEEP-TRAINED TEACHERS</h4>
+                    <h4>Highly Experienced Teachers</h4>
                 </div>
                 <!-- 4. Transparency -->
-                <div class="ekam-card">
+                <div class="feature-card">
                     <div class="icon-wrapper">🤝</div>
-                    <h4>HIGH TRANSPARENCY &<br>APPROACHABILITY FOR PARENTS</h4>
+                    <h4>Transparency & Approachability</h4>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Admissions / Call to Action -->
+    <section id="admissions" class="section admissions-section">
+        <div class="container text-center">
+            <h2 class="section-title">Start Your Journey With Us</h2>
+            <p class="cta-text">Enrollments are open for the upcoming academic year. Schedule a visit to experience our
+                warm environment firsthand.</p>
+            <a href="#contact" class="btn btn-primary btn-large">Book a Tour</a>
         </div>
     </section>
 
@@ -110,7 +126,7 @@
                         <strong>Happy Tods Perambur</strong><br>
                         7 Stephenson Road, Binny Garden,<br>
                         Perambur, Chennai - 600012<br>
-                        <span style="font-size: 0.9em; color: var(--text-light);">(Near North Town Estate)</span>
+                        <span class="location-note">(Near North Town Estate)</span>
                     </p>
                     <div class="contact-methods">
                         <a href="tel:9566033393" class="contact-item">📞 9566033393</a>
@@ -131,12 +147,13 @@
         </div>
     </section>
 
-    <footer>
+    <footer class="minimal-footer">
         <div class="container">
-            <h2 style="font-size: 2.5rem;">Happy Tods Perambur 🧸</h2>
-            <p style="font-size: 1.2rem;">Nurturing and growing each child to their full potential.</p>
-            <br>
-            <p>&copy; 2026 Happy Tods. All Rights Reserved.</p>
+            <h3>Happy Tods Perambur 🧸</h3>
+            <p>Nurturing and growing each child to their full potential.</p>
+            <div class="footer-bottom">
+                &copy; 2026 Happy Tods. All Rights Reserved.
+            </div>
         </div>
     </footer>
 
