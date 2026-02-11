@@ -1,31 +1,46 @@
 :root {
-    /* Nature-Inspired Palette */
-    --primary-green: #2C3E50;
-    /* Dark Blue/Grey for text */
-    --primary-cream: #F5EFEB;
-    /* Lighter Cream/Beige */
-    --primary-blue: #587C95;
-    /* Slate Blue for Difference Section */
-    --accent-pink: #F7CAC9;
-    --earth-tone: #E0C9A6;
-    --action-orange: #F39C12;
-    /* Admissions Button */
-    --text-gold: #F4C45E;
-    /* Gold text */
-    --soft-white: #FFFFFF;
+    /* International / Sky Theme Palette */
+    --primary-brand: #00A8CC;
+    /* Vibrant Cyan/Blue */
+    --secondary-brand: #0C7B93;
+    /* Deep Teal/Blue */
+    --accent-yellow: #FFCF40;
+    /* Cheerful Sun Yellow */
+    --accent-coral: #FF6B6B;
+    /* Playful Coral */
 
-    --text-main: #2C3E50;
-    /* Dark Blue/Grey for text */
-    --text-light: #596275;
+    --bg-body: #F0F8FF;
+    /* Alice Blue - Very subtle bluish tint */
+    --bg-white: #FFFFFF;
 
-    /* Fonts */
+    --text-main: #142850;
+    /* Deep Navy for text - High Contrast */
+    --text-light: #52616B;
+    /* Soft Grey-Blue */
+
+    /* Global Mappings to keep existing classes working initially */
+    --primary-green: var(--secondary-brand);
+    /* Replaces old primary text color */
+    --primary-cream: var(--bg-body);
+    /* Replaces cream bg */
+    --primary-blue: var(--primary-brand);
+    /* Replaces old slate blue */
+    --accent-pink: var(--accent-coral);
+    --earth-tone: var(--accent-yellow);
+    --action-orange: var(--accent-coral);
+    --text-gold: var(--accent-yellow);
+    --soft-white: var(--bg-white);
+
+    /* Fonts (Keep existing for now, they are good) */
     --font-heading: 'Fredoka', cursive;
     --font-body: 'Quicksand', sans-serif;
 
     /* Spacing & Shapes */
     --radius-md: 20px;
     --radius-lg: 40px;
-    --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    --card-shadow: 0 15px 35px rgba(0, 168, 204, 0.1);
+    /* Subtle bluish shadow */
+    --card-hover-shadow: 0 20px 40px rgba(0, 168, 204, 0.2);
 }
 
 /* --- Top Bar (Removed) --- */
@@ -38,10 +53,13 @@
 
 body {
     font-family: var(--font-body);
-    background-color: var(--primary-cream);
+    background-color: var(--bg-body);
     color: var(--text-main);
     line-height: 1.6;
     overflow-x: hidden;
+    background-image: radial-gradient(#E0F7FA 1px, transparent 1px);
+    background-size: 20px 20px;
+    /* Subtle dot pattern */
 }
 
 a {
@@ -57,11 +75,13 @@ h3,
 h4 {
     font-family: var(--font-heading);
     font-weight: 600;
+    color: var(--secondary-brand);
+    /* Headings in deep teal/blue */
 }
 
 .section-title {
     font-size: 2.5rem;
-    color: var(--primary-green);
+    color: var(--secondary-brand);
     margin-bottom: 30px;
     position: relative;
     display: inline-block;
@@ -79,29 +99,31 @@ h4 {
     font-weight: 700;
     font-family: var(--font-body);
     cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 168, 204, 0.2);
     transition: transform 0.2s, box-shadow 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 168, 204, 0.3);
 }
 
 .btn-primary {
-    background-color: var(--action-orange);
+    background-color: var(--accent-coral);
     color: white;
-    border: 2px solid var(--action-orange);
+    border: none;
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: var(--primary-green);
-    border: 2px solid var(--primary-green);
+    color: var(--primary-brand);
+    border: 2px solid var(--primary-brand);
 }
 
 .btn-secondary:hover {
-    background-color: var(--primary-green);
+    background-color: var(--primary-brand);
     color: white;
 }
 
@@ -121,10 +143,12 @@ h4 {
 .navbar {
     position: sticky;
     top: 0;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(15px);
+    /* Stronger blur for glass effect */
     z-index: 1000;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .navbar-content {
@@ -148,7 +172,7 @@ h4 {
 .logo-text {
     font-family: var(--font-heading);
     font-size: 1.5rem;
-    color: var(--primary-green);
+    color: var(--primary-brand);
 }
 
 .nav-links {
@@ -161,74 +185,101 @@ h4 {
 .nav-links a {
     font-weight: 600;
     font-size: 1.1rem;
+    color: var(--text-light);
 }
 
 .nav-links a:hover {
-    color: var(--action-orange);
+    color: var(--primary-brand);
 }
 
 .mobile-menu-btn {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
+    color: var(--primary-brand);
 }
 
 /* --- Welcome Section --- */
 .welcome-section {
-    padding: 80px 20px;
-    background-color: var(--primary-cream);
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #E0F7FA 0%, #FFFFFF 100%);
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 70vh;
-    /* More vertical space like the screenshot */
+    min-height: 80vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Floating shapes background */
+.welcome-section::before,
+.welcome-section::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.welcome-section::before {
+    width: 300px;
+    height: 300px;
+    background: var(--primary-brand);
+    top: -50px;
+    left: -50px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.welcome-section::after {
+    width: 200px;
+    height: 200px;
+    background: var(--accent-yellow);
+    bottom: 50px;
+    right: -50px;
+    animation: float 8s ease-in-out infinite reverse;
 }
 
 .welcome-content {
     max-width: 900px;
-    /* Wider for the text to breathe */
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .welcome-title {
     font-family: var(--font-body);
-    /* Sans-serif for "WELCOME TO" */
     font-size: 2.5rem;
-    color: #4A4A4A;
+    color: var(--text-light);
     margin-bottom: 40px;
     text-transform: uppercase;
     font-weight: 400;
-    /* Regular weight */
     letter-spacing: 3px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 15px;
-    /* Space between "WELCOME TO" and "happy tods" */
     flex-wrap: wrap;
 }
 
 .welcome-title .highlight-text {
     font-family: var(--font-heading);
-    color: var(--action-orange);
-    /* Orange/Gold Color */
+    color: var(--primary-brand);
+    /* Blue Highlight */
     text-transform: lowercase;
     font-size: 5rem;
-    /* Much larger */
     font-weight: 700;
-    transform: rotate(-5deg);
-    /* Slight rotation */
+    transform: rotate(-3deg);
     display: inline-block;
     line-height: 0.8;
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.05);
+    /* Soft dimension */
 }
 
 .welcome-body p {
     font-size: 1.3rem;
-    /* Larger body text */
-    color: #555;
-    /* Soft dark grey */
+    color: var(--text-light);
     margin-bottom: 30px;
     line-height: 1.8;
     font-weight: 500;
@@ -239,13 +290,15 @@ h4 {
 
 /* --- Difference Section (Blue) --- */
 .difference-section {
-    background-color: var(--primary-blue);
-    padding: 80px 0;
+    background-color: var(--primary-brand);
+    padding: 100px 0;
     color: white;
+    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+    /* Modern angled edge */
 }
 
 .text-gold {
-    color: var(--text-gold) !important;
+    color: var(--accent-yellow) !important;
 }
 
 .text-white {
@@ -255,28 +308,33 @@ h4 {
 .facilities-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* 4 columns for difference items */
     gap: 30px;
     margin-top: 50px;
     text-align: center;
 }
 
 .facility-card.transparent {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.1);
+    /* Glass effect */
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: none;
-    padding: 0;
-    border: none;
+    padding: 30px;
+    border-radius: var(--radius-md);
+    transition: 0.3s;
 }
 
 .facility-card.transparent:hover {
-    transform: translateY(-5px);
-    background: transparent;
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .icon-large {
     font-size: 4rem;
     margin-bottom: 20px;
     display: block;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .facility-card h4 {
@@ -309,7 +367,7 @@ h4 {
 
 /* --- About Section --- */
 .about-section {
-    background-color: var(--primary-cream);
+    background-color: var(--bg-white);
 }
 
 .about-grid {
@@ -320,7 +378,7 @@ h4 {
 }
 
 .badge {
-    background: var(--accent-pink);
+    background: var(--accent-yellow);
     color: var(--text-main);
     padding: 5px 15px;
     border-radius: 20px;
@@ -328,6 +386,7 @@ h4 {
     font-size: 0.9rem;
     display: inline-block;
     margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(255, 207, 64, 0.3);
 }
 
 .about-content .lead {
@@ -345,26 +404,28 @@ h4 {
     width: 100%;
     border-radius: var(--radius-lg);
     box-shadow: var(--card-shadow);
-    border: 5px solid white;
+    border: 8px solid white;
 }
 
 .floating-card {
     position: absolute;
-    bottom: -20px;
-    right: -20px;
+    bottom: -30px;
+    right: -30px;
     background: white;
-    padding: 15px 25px;
+    padding: 20px 30px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--card-shadow);
     font-weight: 700;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
+    color: var(--primary-brand);
+    animation: float 5s ease-in-out infinite;
 }
 
 /* --- Facts Section --- */
 .facts-section {
-    background-color: var(--soft-white);
+    background-color: var(--bg-body);
     position: relative;
     padding-bottom: 150px;
     /* Space for wave */
@@ -382,24 +443,31 @@ h4 {
     padding: 30px 20px;
     border-radius: var(--radius-md);
     text-align: center;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--card-shadow);
     border: 1px solid rgba(0, 0, 0, 0.03);
     transition: 0.3s;
 }
 
 .fact-card:hover {
     transform: translateY(-10px);
-    border-color: var(--primary-green);
+    border-color: var(--primary-brand);
+    box-shadow: var(--card-hover-shadow);
 }
 
 .fact-icon {
     font-size: 2.5rem;
     margin-bottom: 15px;
+    background: var(--bg-body);
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
 }
 
 .fact-card h3 {
     margin-bottom: 5px;
-    color: var(--primary-green);
+    color: var(--secondary-brand);
 }
 
 .custom-shape-divider-bottom-wave {
@@ -419,14 +487,15 @@ h4 {
 }
 
 .custom-shape-divider-bottom-wave .shape-fill {
-    fill: var(--earth-tone);
+    fill: var(--primary-brand);
+    /* Fill with the blue of the next section */
 }
 
 /* --- Facilities Section --- */
 .facilities-section {
-    background-color: var(--earth-tone);
+    background-color: var(--bg-body);
     /* Make background slightly lighter/different if needed, but earth tone is good contrast */
-    background: linear-gradient(180deg, var(--earth-tone) 0%, rgba(224, 201, 166, 0.3) 100%);
+    background: linear-gradient(180deg, var(--bg-body) 0%, rgba(0, 168, 204, 0.05) 100%);
 }
 
 /* Center icons */
@@ -448,12 +517,13 @@ h4 {
     gap: 10px;
     text-align: center;
     transition: 0.2s;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--card-shadow);
 }
 
 .facility-card:hover {
     transform: scale(1.05);
-    background: var(--primary-cream);
+    background: white;
+    box-shadow: var(--card-hover-shadow);
 }
 
 .facility-card .icon {
@@ -604,4 +674,65 @@ footer {
 .fade-in-up.visible {
     opacity: 1;
     transform: translateY(0);
-}
+}@ k e y f r a m e s   f l o a t   {  
+         0 %   {  
+                 t r a n s f o r m :   t r a n s l a t e Y ( 0 p x )   r o t a t e ( 0 d e g ) ;  
+         }  
+  
+         5 0 %   {  
+                 t r a n s f o r m :   t r a n s l a t e Y ( - 2 0 p x )   r o t a t e ( 2 d e g ) ;  
+         }  
+  
+         1 0 0 %   {  
+                 t r a n s f o r m :   t r a n s l a t e Y ( 0 p x )   r o t a t e ( 0 d e g ) ;  
+         }  
+ }  
+  
+ @ k e y f r a m e s   p o p   {  
+         0 %   {  
+                 t r a n s f o r m :   s c a l e ( 1 ) ;  
+         }  
+  
+         5 0 %   {  
+                 t r a n s f o r m :   s c a l e ( 1 . 0 5 ) ;  
+         }  
+  
+         1 0 0 %   {  
+                 t r a n s f o r m :   s c a l e ( 1 ) ;  
+         }  
+ }  
+  
+ / *   E n s u r e   a n i m a t i o n s   c l a s s   i s   a c t i v e   * /  
+ . v i s i b l e   {  
+         o p a c i t y :   1 ;  
+         t r a n s f o r m :   t r a n s l a t e Y ( 0 ) ;  
+ }  
+ / *   R e f i n e m e n t s   f o r   i n t e r a c t i o n s   * /  
+ . w e l c o m e - t i t l e   . h i g h l i g h t - t e x t   {  
+         t r a n s i t i o n :   t r a n s f o r m   0 . 3 s   e a s e ;  
+         c u r s o r :   d e f a u l t ;  
+ }  
+  
+ . w e l c o m e - t i t l e   . h i g h l i g h t - t e x t : h o v e r   {  
+         t r a n s f o r m :   r o t a t e ( 0 d e g )   s c a l e ( 1 . 1 ) ;  
+ }  
+  
+ . n a v - l i n k s   a   {  
+         p o s i t i o n :   r e l a t i v e ;  
+ }  
+  
+ . n a v - l i n k s   a : : a f t e r   {  
+         c o n t e n t :   ' ' ;  
+         p o s i t i o n :   a b s o l u t e ;  
+         w i d t h :   0 ;  
+         h e i g h t :   2 p x ;  
+         b o t t o m :   - 5 p x ;  
+         l e f t :   0 ;  
+         b a c k g r o u n d - c o l o r :   v a r ( - - p r i m a r y - b r a n d ) ;  
+         t r a n s i t i o n :   w i d t h   0 . 3 s   e a s e ;  
+ }  
+  
+ . n a v - l i n k s   a : h o v e r : : a f t e r   {  
+         w i d t h :   1 0 0 % ;  
+ }  
+ 
