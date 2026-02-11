@@ -1,27 +1,40 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Toggle
     const mobileBtn = document.querySelector('.mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
+    const navMenu = document.querySelector('.nav-menu');
 
-    if (mobileBtn) {
+    if (mobileBtn && navMenu) {
         mobileBtn.addEventListener('click', () => {
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-            if (navLinks.style.display === 'flex') {
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '80px';
-                navLinks.style.left = '0';
-                navLinks.style.width = '100%';
-                navLinks.style.background = 'white';
-                navLinks.style.padding = '20px';
-                navLinks.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
+            // Check if display is flex AND position is absolute (active mobile state)
+            const isActive = navMenu.classList.contains('mobile-active');
+
+            if (isActive) {
+                navMenu.classList.remove('mobile-active');
+                navMenu.style.display = 'none';
+            } else {
+                navMenu.classList.add('mobile-active');
+                navMenu.style.display = 'flex';
+                // Inline styles for mobile layout
+                navMenu.style.flexDirection = 'column';
+                navMenu.style.position = 'absolute';
+                navMenu.style.top = '90px'; // Match nav height
+                navMenu.style.left = '0';
+                navMenu.style.width = '100%';
+                navMenu.style.background = '#F3F3F1'; // Match body bg
+                navMenu.style.padding = '30px';
+                navMenu.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
+                navMenu.style.gap = '20px';
+
+                // Ensure inner items stack
+                const navLinks = navMenu.querySelector('.nav-links');
+                if (navLinks) navLinks.style.flexDirection = 'column';
             }
         });
     }
 
     // Scroll Animation (Intersection Observer)
     const observerOptions = {
-        threshold: 0.2
+        threshold: 0.1
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -33,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    const animatedElements = document.querySelectorAll('.feature-card, .about-text, .about-decoration, .section-title, .hero-content');
+    const animatedElements = document.querySelectorAll('.feature-card, .about-text, .about-decoration, .section-title, .hero-container');
     animatedElements.forEach(el => {
         el.classList.add('fade-in-up');
         observer.observe(el);

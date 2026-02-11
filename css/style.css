@@ -1,27 +1,22 @@
 :root {
-    /* --- Happy Tods Warm Palette --- */
+    /* --- Exact Reference Palette --- */
 
     /* Backgrounds */
-    --bg-body: #F9F7F2;
-    /* Soft Beige/Cream */
+    --bg-body: #F3F3F1;
+    /* Warm Light Grey/Off-White */
     --bg-white: #FFFFFF;
-    /* Clean White */
-    --bg-contrast: #ABC4D4;
-    /* Muted Dusty Blue (for section blocks) */
 
     /* Accents */
-    --accent-mustard: #DCAE1D;
-    /* Warm Mustard */
-    --accent-coral: #E68A7C;
-    /* Soft Coral (Secondary accent) */
+    --accent-yellow: #F4B95F;
+    /* Golden Mustard (Admissions) */
+    --accent-blue: #647C9F;
+    /* Slate Blue (Franchise) */
 
     /* Text */
-    --text-main: #4A4A4A;
-    /* Neutral Grey */
-    --text-heading: #2C3E50;
-    /* Darker Grey/Blue for headings */
-    --text-light: #7F8C8D;
+    --text-main: #7A7A7A;
     /* Muted Grey */
+    --text-heading: #555555;
+    /* Darker Grey */
     --text-white: #FFFFFF;
 
     /* Fonts */
@@ -29,14 +24,12 @@
     --font-body: 'Inter', sans-serif;
 
     /* Spacing & Shapes */
-    --radius-sm: 10px;
-    --radius-md: 20px;
-    --radius-pill: 50px;
+    --radius-btn: 10px;
+    /* Computed from image - Soft Rectangles */
+    --radius-card: 20px;
 
-    /* Shadows */
-    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 10px 20px rgba(0, 0, 0, 0.08);
-    --shadow-float: 0 15px 30px rgba(0, 0, 0, 0.12);
+    /* Navbar specific */
+    --nav-height: 110px;
 }
 
 /* --- Global Reset & Base --- */
@@ -63,7 +56,6 @@ h6 {
     font-family: var(--font-heading);
     color: var(--text-heading);
     font-weight: 600;
-    line-height: 1.3;
 }
 
 a {
@@ -77,121 +69,118 @@ ul {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1300px;
+    /* Slightly wider to fit nav items */
     margin: 0 auto;
     padding: 0 20px;
 }
 
 .section {
     padding: 80px 0;
-    position: relative;
 }
 
 .text-center {
     text-align: center;
 }
 
-.text-white {
-    color: var(--text-white) !important;
-}
-
-/* --- Buttons --- */
-.btn {
-    display: inline-block;
-    padding: 12px 30px;
-    border-radius: var(--radius-pill);
-    font-weight: 500;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-}
-
-.btn-primary {
-    background-color: var(--accent-mustard);
-    color: var(--text-white);
-    box-shadow: var(--shadow-sm);
-}
-
-.btn-primary:hover {
-    background-color: #C29815;
-    /* Darker mustard */
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-}
-
-.btn-outline {
-    background: transparent;
-    border-color: var(--text-heading);
-    color: var(--text-heading);
-}
-
-.btn-outline:hover {
-    background-color: var(--text-heading);
-    color: var(--bg-white);
-}
-
-.btn-large {
-    padding: 15px 40px;
-    font-size: 1.1rem;
-}
-
-/* --- Navbar --- */
+/* --- Navbar (Exact Match) --- */
 .navbar {
+    background-color: var(--bg-body);
+    /* Matches body bg in reference */
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
     position: sticky;
     top: 0;
-    background: var(--bg-white);
-    box-shadow: var(--shadow-sm);
     z-index: 1000;
-    height: 80px;
+    /* Optional: shadow if needed, but reference looks flat */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .navbar-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
+    width: 100%;
 }
 
+/* Logo */
 .logo {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
 }
 
 .logo img {
-    height: 50px;
-    border-radius: 50%;
+    height: 85px;
+    /* Bigger Logo */
+    width: auto;
 }
 
 .logo-text {
     font-family: var(--font-heading);
-    font-size: 1.4rem;
-    font-weight: 700;
+    font-size: 1.8rem;
+    /* Bigger Text */
     color: var(--text-heading);
-    letter-spacing: -0.5px;
+    letter-spacing: 1px;
+    /* Hide text if logo image contains the text, otherwise style matches reference */
 }
 
+/* Nav Links (Center) */
 .nav-links {
     display: flex;
-    gap: 30px;
+    gap: 25px;
     align-items: center;
 }
 
 .nav-links a {
-    font-family: var(--font-body);
-    font-weight: 500;
-    color: var(--text-main);
+    font-family: var(--font-heading);
+    /* Headers font for links */
+    font-weight: 600;
     font-size: 0.95rem;
+    color: var(--text-heading);
+    padding-bottom: 5px;
+    /* Space for border */
+    border-bottom: 4px solid transparent;
+    /* Prepare for hover/active */
 }
 
-.nav-links a:not(.btn):hover {
-    color: var(--accent-mustard);
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent-yellow);
+    border-bottom-color: var(--accent-yellow);
 }
 
-.nav-cta.btn {
+/* Nav Buttons (Right) */
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
     padding: 10px 25px;
-    font-size: 0.9rem;
+    border-radius: var(--radius-btn);
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: white;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    border: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-yellow {
+    background-color: var(--accent-yellow);
+}
+
+.btn-blue {
+    background-color: var(--accent-blue);
 }
 
 .mobile-menu-btn {
@@ -203,77 +192,22 @@ ul {
 
 /* --- Hero Section --- */
 .hero-section {
-    position: relative;
-    padding: 120px 0 150px;
-    background: var(--bg-body);
-    overflow: hidden;
-}
-
-.hero-subtitle {
-    display: block;
-    font-family: var(--font-heading);
-    color: var(--accent-coral);
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
+    padding: 100px 0;
+    background-color: var(--bg-body);
+    text-align: center;
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: var(--text-heading);
-    margin-bottom: 30px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 20px;
 }
 
 .hero-description {
     font-size: 1.2rem;
-    color: var(--text-light);
-    max-width: 600px;
-    margin: 0 auto 40px;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-/* Decorative Backgrounds */
-.hero-bg-decoration {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.circle-deco {
-    position: absolute;
-    border-radius: 50%;
-    opacity: 0.6;
-}
-
-.circle-1 {
-    width: 300px;
-    height: 300px;
-    background: #F0EAD6;
-    /* Slightly darker beige */
-    top: -50px;
-    left: -50px;
-}
-
-.circle-2 {
-    width: 400px;
-    height: 400px;
-    background: #E8F4F8;
-    /* Very light blue */
-    bottom: -100px;
-    right: -100px;
+    color: var(--text-main);
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 /* --- About Section --- */
@@ -288,8 +222,12 @@ ul {
     align-items: center;
 }
 
+.about-text {
+    padding-right: 20px;
+}
+
 .badge {
-    background: var(--accent-mustard);
+    background: var(--accent-yellow);
     color: white;
     padding: 5px 15px;
     border-radius: 20px;
@@ -303,6 +241,7 @@ ul {
     font-size: 2.5rem;
     margin-bottom: 25px;
     color: var(--text-heading);
+    position: relative;
 }
 
 .lead {
@@ -312,20 +251,28 @@ ul {
     color: var(--text-heading);
 }
 
-.about-decoration .deco-box {
-    width: 100%;
-    height: 300px;
-    background: #F0F4F8;
-    border-radius: var(--radius-md);
-    position: relative;
-    /* In a real project, this would be an image */
-    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" fill="%23E0E0E0" opacity="0.5"/></svg>');
-    background-size: cover;
+.body-text {
+    color: var(--text-main);
+    font-size: 1rem;
+    line-height: 1.7;
 }
 
-/* --- Why Consuder Us (Difference) --- */
+.about-decoration .deco-box {
+    width: 100%;
+    height: 350px;
+    background: #E8E8E8;
+    border-radius: var(--radius-card);
+    position: relative;
+    background-image: url('../assets/images/kids_playing.png');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Why Us (Difference) --- */
 .difference-section {
-    background-color: var(--bg-contrast);
+    background-color: var(--accent-blue);
+    /* Slate Blue from reference */
     color: white;
 }
 
@@ -341,10 +288,10 @@ ul {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
     padding: 30px;
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-card);
     flex: 1;
-    min-width: 250px;
-    max-width: 280px;
+    min-width: 260px;
+    max-width: 300px;
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.2);
     transition: transform 0.3s ease;
@@ -352,7 +299,7 @@ ul {
 
 .feature-card:hover {
     transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .icon-wrapper {
@@ -364,20 +311,22 @@ ul {
 .feature-card h4 {
     color: white;
     font-size: 1.1rem;
-    font-weight: 500;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
 }
 
 /* --- Admissions/CTA Section --- */
 .admissions-section {
-    background-color: #E8F1F5;
-    /* Very light version of the blue */
+    background-color: #E6EBF0;
+    /* Very light blue-grey */
 }
 
 .cta-text {
     font-size: 1.3rem;
     max-width: 700px;
     margin: 0 auto 30px;
-    color: var(--text-light);
+    color: var(--text-main);
 }
 
 /* --- Contact Section --- */
@@ -388,9 +337,10 @@ ul {
 .contact-wrapper {
     display: flex;
     background: white;
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-card);
     overflow: hidden;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    /* Softer shadow */
     border: 1px solid #EEE;
 }
 
@@ -403,13 +353,15 @@ ul {
     font-size: 1.1rem;
     color: var(--text-main);
     margin-bottom: 30px;
+    line-height: 1.8;
 }
 
 .location-note {
     font-size: 0.9rem;
-    color: var(--text-light);
+    color: #999;
     display: block;
     margin-top: 5px;
+    font-style: italic;
 }
 
 .contact-methods {
@@ -422,10 +374,11 @@ ul {
 .contact-item {
     font-weight: 600;
     color: var(--text-heading);
+    font-size: 1.1rem;
 }
 
 .contact-item:hover {
-    color: var(--accent-mustard);
+    color: var(--accent-yellow);
 }
 
 .btn-social {
@@ -435,6 +388,7 @@ ul {
     font-size: 0.9rem;
     display: inline-block;
     margin-right: 10px;
+    font-weight: 500;
 }
 
 .btn-social.insta {
@@ -452,33 +406,37 @@ ul {
 
 /* --- Footer --- */
 .minimal-footer {
-    background: var(--text-heading);
+    background: #333;
+    /* Dark Grey */
     color: white;
-    padding: 50px 0 20px;
+    padding: 60px 0 20px;
     text-align: center;
 }
 
 .minimal-footer h3 {
     color: white;
     font-size: 1.8rem;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .minimal-footer p {
-    color: rgba(255, 255, 255, 0.7);
+    color: #CCC;
     margin-bottom: 30px;
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid #444;
     padding-top: 20px;
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: #888;
 }
 
 /* --- Responsive --- */
 @media (max-width: 900px) {
-    .nav-links {
+
+    /* Hide desktop nav */
+    .nav-links,
+    .nav-buttons {
         display: none;
     }
 
@@ -488,11 +446,6 @@ ul {
 
     .hero-title {
         font-size: 2.5rem;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
     }
 
     .about-grid {
@@ -508,65 +461,15 @@ ul {
     }
 }
 
-
-@keyframes float {
-    0% {
-        transform: translateY(0px) rotate(0deg);
-    }
-
-    50% {
-        transform: translateY(-20px) rotate(2deg);
-    }
-
-    100% {
-        transform: translateY(0px) rotate(0deg);
-    }
-}
-
-@keyframes pop {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.05);
-    }
-
-    100% {
-        transform: scale(1);
-    }
+/* --- Animations --- */
+/* Simple fade up for content */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .visible {
     opacity: 1;
     transform: translateY(0);
-}
-
-/* Refinements */
-.welcome-title .highlight-text {
-    transition: transform 0.3s ease;
-    cursor: default;
-}
-
-.welcome-title .highlight-text:hover {
-    transform: rotate(0deg) scale(1.1);
-}
-
-.nav-links a {
-    position: relative;
-}
-
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background-color: var(--primary-brand);
-    transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after {
-    width: 100%;
 }
