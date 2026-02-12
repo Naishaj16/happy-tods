@@ -1,5 +1,4 @@
+// Minimal script for Happy Tots Clean Rebuild
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Happy Tods Clean Rebuild Initialized');
-
-    // Core interactivity will be added as components are built
+    console.log('Happy Tots Rebuild Initialized');
 });

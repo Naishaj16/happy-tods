@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Tods | International Early Learning Center</title>
+    <title>Happy Tots | International Early Learning Center</title>
 
-    <!-- Google Fonts: Nunito (Headings), Inter (Body) -->
+    <!-- Fonts: Poppins (Headings) & Inter (Body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Nunito:wght@600;700;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
         rel="stylesheet">
 
-    <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -21,98 +21,154 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="nav-brand">
-                <img src="assets/images/logo.jpg" alt="Happy Tods Logo" class="nav-logo"
-                    style="height: 50px; border-radius: 8px;">
-                <span>Happy Tods</span>
-            </a>
+            <div class="logo">
+                <img src="assets/images/logo.jpg" alt="Happy Tots Logo">
+                <span class="logo-text">HAPPY TOTS</span>
+            </div>
 
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="programmes.html">Programmes</a></li>
-                <li><a href="why-us.html">Why Happy Tots</a></li>
-                <li><a href="campuses.html">Campuses (Chennai)</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#campus">Campus</a></li>
+                <li><a href="#contact" class="btn btn-primary" style="padding: 10px 24px;">Enroll Now</a></li>
             </ul>
-
-            <div class="nav-actions">
-                <a href="#admissions" class="btn btn-primary">Admissions</a>
-            </div>
         </div>
     </nav>
 
     <main>
         <!-- Hero Section -->
-        <section class="hero">
+        <section id="home" class="hero">
             <div class="container">
                 <div class="hero-grid">
                     <div class="hero-content">
-                        <span class="hero-tag">Enrolling for 2026</span>
-                        <h1 class="hero-title">A Warm Start for Your Child's <span
-                                style="color: var(--color-green);">Journey</span></h1>
-                        <p class="hero-desc">Experience an international standard of early childhood education where
-                            every child's curiosity is nurtured in a safe, premium environment.</p>
+                        <span class="badge">Enrolling for 2026</span>
+                        <h1>A Beautiful Start for Every Child</h1>
+                        <p>Providing a warm, safe, and premium learning environment where curiosity meets world-class
+                            education.</p>
                         <div class="hero-btns">
-                            <a href="#book-tour" class="btn btn-primary">Book a Campus Tour</a>
-                            <a href="#philosophy" class="btn btn-secondary" style="margin-left: 15px;">Our
-                                Philosophy</a>
+                            <a href="#programs" class="btn btn-primary">Discover Programs</a>
+                            <a href="#campus" class="btn btn-outline">Visit Campus</a>
                         </div>
                     </div>
-                    <div class="hero-image-container">
-                        <img src="assets/images/kids_playing.png" alt="Happy Tods Kids Playing" class="hero-image">
+                    <div class="hero-image">
+                        <img src="assets/images/kids_playing.png" alt="Happy Children Learning">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Our Philosophy Section -->
-        <section id="philosophy" class="section secondary-bg">
+        <!-- About Section -->
+        <section id="about" class="section about-section">
             <div class="container text-center">
-                <h2 class="section-title mb-20" style="font-size: 2.5rem;">The Heart of Our Teaching</h2>
-                <p class="section-desc" style="max-width: 700px; margin: 0 auto 60px;">Inspired by the world's best
-                    early childhood practices, we focus on play-based learning that respects each child's individual
-                    pace.</p>
+                <span class="badge">Nurturing Young Minds</span>
+                <h2 class="section-title">A Reggio Emilia Inspired Approach</h2>
+                <p class="lead-text">At Happy Tots, we believe that every child is unique and capable. Our environment
+                    is designed to be a "third teacher," encouraging exploration and discovery.</p>
 
-                <div class="philosophy-grid">
-                    <div class="feature-card">
-                        <div class="icon-box" style="background-color: var(--color-primary);">🌱</div>
-                        <h3>Natural Desire</h3>
-                        <p>Activating a child's natural desire to learn through purposeful play and exploration.</p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-icon" style="background: var(--accent-blue);">🏠</div>
+                        <h3>Safe & Warm</h3>
+                        <p>Home-like environment</p>
                     </div>
-                    <div class="feature-card">
-                        <div class="icon-box" style="background-color: var(--color-secondary);">🤝</div>
-                        <h3>Nurturing Trust</h3>
-                        <p>Building strong foundations of trust and security between teachers, children, and parents.
-                        </p>
+                    <div class="stat-item">
+                        <div class="stat-icon" style="background: var(--accent-peach);">🎨</div>
+                        <h3>Creative Play</h3>
+                        <p>Discovery-based learning</p>
                     </div>
-                    <div class="feature-card">
-                        <div class="icon-box" style="background-color: var(--color-green);">⭐</div>
-                        <h3>Elite Standard</h3>
-                        <p>Meeting international quality standards to ensure your child receives the best care possible.
-                        </p>
+                    <div class="stat-item">
+                        <div class="stat-icon" style="background: var(--accent-green);">🌱</div>
+                        <h3>Holistic Growth</h3>
+                        <p>Cognitive & emotional</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CTAs / Multi-page Teaser -->
-        <section class="section">
+        <!-- Programs Section -->
+        <section id="programs" class="section programs-section">
             <div class="container">
-                <div class="cta-banner">
-                    <div class="cta-text">
-                        <h2>Explore Our Programmes</h2>
-                        <p>From Toddlers to Kindergarten, we have specialized curricula for every stage.</p>
+                <div class="section-header text-center">
+                    <h2 class="section-title">Our Learning Programs</h2>
+                    <p class="lead-text">Tailored programs for every developmental stage.</p>
+                </div>
+
+                <div class="program-grid">
+                    <div class="program-card">
+                        <div class="program-banner" style="background: var(--accent-blue);"></div>
+                        <div class="program-content">
+                            <h3>Preschool</h3>
+                            <p>Focusing on social skills and foundational literacy through purposeful play.</p>
+                            <span class="program-time">09:00 AM — 12:30 PM</span>
+                        </div>
                     </div>
-                    <a href="programmes.html" class="btn btn-white">View Programmes</a>
+                    <div class="program-card">
+                        <div class="program-banner" style="background: var(--accent-peach);"></div>
+                        <div class="program-content">
+                            <h3>Extended Care</h3>
+                            <p>Safe afternoon care for working parents with healthy meal options.</p>
+                            <span class="program-time">12:30 PM — 07:00 PM</span>
+                        </div>
+                    </div>
+                    <div class="program-card">
+                        <div class="program-banner" style="background: var(--accent-green);"></div>
+                        <div class="program-content">
+                            <h3>Summer Camp</h3>
+                            <p>Specialized holiday programs involving arts, music, and outdoor discovery.</p>
+                            <span class="program-time">Seasonal Intake</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <!-- Campus/Location Section -->
+        <section id="campus" class="section campus-section">
+            <div class="container">
+                <div class="campus-grid">
+                    <div class="campus-content">
+                        <span class="badge" style="background: var(--accent-blue);">Our Campus</span>
+                        <h2 class="section-title">Happy Tots Perambur</h2>
+                        <p>Our flagship learning center in Chennai, designed to be a nurturing second home for your
+                            child.</p>
+
+                        <div class="contact-details">
+                            <div class="contact-row">
+                                <span class="icon">📍</span>
+                                <p>7 Stephenson Road, Binny Garden, Perambur, Chennai - 600012</p>
+                            </div>
+                            <div class="contact-row">
+                                <span class="icon">📞</span>
+                                <p>+91 95660 33393</p>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn btn-primary">Schedule a Visit</a>
+                    </div>
+                    <div class="campus-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.836484393649!2d80.2396!3d13.1098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265e3174246ab%3A0x36853755452f3068!2sNorth%20Town%20Estate%20Adyar%20Ananda%20Bhavan%20A2B!5e0!3m2!1sen!2sin!4v1645000000000!5m2!1sen!2sin"
+                            width="100%" height="100%" style="border:0; border-radius: var(--radius-md);"
+                            allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="contact" class="footer">
+            <div class="container text-center">
+                <h3 style="font-size: 2rem; margin-bottom: 20px;">Every child deserves a happy start.</h3>
+                <div class="footer-links" style="margin-bottom: 30px;">
+                    <a href="https://www.instagram.com/happy_tods/">Instagram</a>
+                    <a href="http://www.happytods.in/" style="margin-left: 20px;">Official Website</a>
+                </div>
+                <p style="opacity: 0.6; font-size: 0.9rem;">&copy; 2026 Happy Tots Early Learning Center. All rights
+                    reserved.</p>
+            </div>
+        </footer>
     </main>
 
-    <!-- Footer (Coming next) -->
-
-    <!-- Scripts -->
     <script src="js/script.js"></script>
 </body>
 
