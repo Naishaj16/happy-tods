@@ -40,6 +40,20 @@
     --color-blue: #54A0FF;
     --color-purple: #5F27CD;
 
+    /* Funky Vibrant Palette */
+    --funky-pink: #FF4757;
+    --funky-orange: #FFA502;
+    --funky-yellow: #ECCC68;
+    --funky-green: #2ED573;
+    --funky-blue: #1E90FF;
+    --funky-purple: #70A1FF;
+    --funky-teal: #1DB9C3;
+
+    /* Glassmorphism Defaults */
+    --glass-bg: rgba(255, 255, 255, 0.4);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-blur: blur(15px);
+
     /* Spacing & Shapes */
     --radius-btn: 10px;
     /* Computed from image - Soft Rectangles */
@@ -140,6 +154,112 @@ ul {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
+}
+
+/* --- Funky Typography Utilities --- */
+.font-funky {
+    font-family: 'Bubblegum Sans', cursive;
+}
+
+.funky-title {
+    display: inline-flex;
+    gap: 8px;
+    font-size: 6rem;
+    font-weight: 400;
+    line-height: 1;
+    justify-content: center;
+    width: 100%;
+}
+
+.funky-letter {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: default;
+    /* Removed random rotations for proper alignment */
+}
+
+.funky-letter:hover {
+    transform: scale(1.2) translateY(-10px);
+    z-index: 10;
+}
+
+/* Individual letter color logic (keeping vibrant colors but aligning) */
+.funky-letter:nth-child(7n+1) {
+    color: var(--funky-pink);
+}
+
+.funky-letter:nth-child(7n+2) {
+    color: var(--funky-orange);
+}
+
+.funky-letter:nth-child(7n+3) {
+    color: var(--funky-teal);
+}
+
+.funky-letter:nth-child(7n+4) {
+    color: var(--funky-yellow);
+}
+
+.funky-letter:nth-child(7n+5) {
+    color: var(--funky-green);
+}
+
+.funky-letter:nth-child(7n+6) {
+    color: var(--funky-blue);
+}
+
+.funky-letter:nth-child(7n+0) {
+    color: var(--funky-purple);
+}
+
+/* Glassmorphism Utility */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-card);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+}
+
+/* Animations */
+@keyframes float {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+.float-anim {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Gradient Backgrounds */
+.bg-vibrant {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* --- Branding Logo (Castlefield Style) --- */
@@ -306,13 +426,66 @@ ul {
     color: var(--text-heading);
 }
 
-/* --- Hero Section (Decent / Natural) --- */
-.hero-section {
-    padding: 80px 0;
-    background-color: var(--bg-body);
-    /* Clean, warm background */
+/* Floating Decorations */
+.floating-circle {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.15;
+}
+
+.c1 {
+    width: 100px;
+    height: 100px;
+    background: var(--funky-pink);
+    top: 10%;
+    left: 5%;
+    animation: float 8s infinite ease-in-out;
+}
+
+.c2 {
+    width: 150px;
+    height: 150px;
+    background: var(--funky-blue);
+    bottom: 15%;
+    right: 10%;
+    animation: float 12s infinite ease-in-out reverse;
+}
+
+.c3 {
+    width: 80px;
+    height: 80px;
+    background: var(--funky-yellow);
+    top: 50%;
+    right: 20%;
+    animation: float 10s infinite ease-in-out 1s;
+}
+
+/* Section Overlap Aesthetic */
+.section-overlap {
+    margin-top: -80px;
+    z-index: 5;
     position: relative;
-    overflow: hidden;
+}
+
+/* Funky Hero Refinement */
+.hero-section {
+    padding: 140px 0;
+    background: radial-gradient(circle at top left, rgba(255, 71, 87, 0.03), transparent),
+        radial-gradient(circle at bottom right, rgba(30, 144, 255, 0.03), transparent);
+}
+
+.hero-subtitle {
+    letter-spacing: -0.5px;
+    font-weight: 700;
+    font-size: 2.8rem;
+    margin-top: 20px;
+}
+
+.hero-description {
+    color: var(--text-main);
+    line-height: 1.8;
 }
 
 .hero-container {
@@ -507,35 +680,53 @@ ul {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* --- Heritage Section --- */
+/* --- Heritage Section (Aesthetic Overhaul) --- */
 .heritage-section {
     background-color: #FAF9F6;
-    /* Creamy White */
-    padding: 60px 0;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.heritage-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: var(--funky-yellow);
+    opacity: 0.1;
+    border-radius: 50%;
 }
 
 .heritage-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
-    text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
-.heritage-icon {
-    font-size: 2.5rem;
-    display: block;
-    margin-bottom: 15px;
+.heritage-item {
+    padding: 40px;
+    transition: transform 0.4s ease;
+}
+
+.heritage-item:hover {
+    transform: translateY(-10px);
 }
 
 .heritage-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    font-size: 1.8rem;
+    color: var(--text-heading);
+    margin-bottom: 15px;
 }
 
-/* --- Positive Approach Section --- */
+/* --- Positive Approach (Aesthetic) --- */
 .positive-approach {
-    background-color: var(--bg-white);
-    padding: 100px 0;
+    padding: 120px 0;
+    background: radial-gradient(circle at top right, rgba(254, 202, 87, 0.1), transparent);
 }
 
 .approach-content {
@@ -543,9 +734,13 @@ ul {
     margin: 0 auto;
 }
 
+.approach-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 40px;
+}
+
 /* --- Why Us (Difference) --- */
 .difference-section {
-    background-color: var(--accent-blue);
     /* Slate Blue from reference */
     color: white;
 }

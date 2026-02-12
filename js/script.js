@@ -63,4 +63,16 @@ document.addEventListener('DOMContentLoaded', () => {
             el.appendChild(span);
         });
     });
+
+    // Funky Title Generator
+    const funkyTitle = document.getElementById('funky-title');
+    if (funkyTitle) {
+        const brands = "HAPPYTODS";
+        [...brands].forEach(char => {
+            const span = document.createElement('span');
+            span.innerText = char;
+            span.classList.add('funky-letter');
+            funkyTitle.appendChild(span);
+        });
+    }
 });
