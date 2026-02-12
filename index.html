@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Quicksand:wght@400;500;600;700&family=Patrick+Hand&family=Baloo+2:wght@400;600;800&family=Bubblegum+Sans&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -23,8 +23,15 @@
             <div class="container navbar-content">
                 <!-- Left: Logo -->
                 <div class="logo">
-                    <img src="assets/images/logo.jpg" alt="Happy Tods Logo">
-                    <span class="logo-text">Happy Tods</span>
+                    <a href="#home" class="branding-logo">
+                        <div class="castle-icon"></div>
+                        <div class="branding-main">
+                            <span>H</span><span>a</span><span>p</span><span>p</span><span>y</span>
+                            <span>&nbsp;</span>
+                            <span>T</span><span>o</span><span>d</span><span class="smile-char">s</span>
+                        </div>
+                        <div class="branding-sub">KINDERGARTEN</div>
+                    </a>
                 </div>
 
                 <!-- Center: Navigation Links -->
@@ -53,12 +60,13 @@
             <div class="container hero-container">
                 <!-- Left: Text -->
                 <div class="hero-content">
-                    <h1 class="hero-title">Where <span class="highlight">Happy Childhoods</span> Begin</h1>
+                    <h1 class="hero-title text-playful">A local Chennai <span
+                            class="highlight multicolor-text">kindergarten</span> your children will love</h1>
                     <p class="hero-description">Top-quality care and education in a warm, nature-inspired environment.
                     </p>
                     <div class="hero-btns">
-                        <a href="#about" class="btn btn-yellow">Our Philosophy</a>
-                        <a href="#contact" class="btn btn-blue" style="margin-left: 10px;">Book a Tour</a>
+                        <a href="#contact" class="btn btn-primary btn-large">Book a Tour</a>
+                        <a href="#about" class="btn btn-blue" style="margin-left: 10px;">Our Philosophy</a>
                     </div>
                 </div>
                 <!-- Right: Image with Blob -->
@@ -77,13 +85,12 @@
                 <div class="about-grid">
                     <div class="about-text">
                         <span class="badge">Our Philosophy</span>
-                        <h2 class="section-title">Nurturing Young Minds</h2>
-                        <p class="lead">We are a Reggio Emilia inspired early learning center blending global curricular
-                            frameworks.</p>
-                        <p class="body-text">At Happy Tods, we believe that every child is unique and capable. Our
-                            environment is designed to be a "third teacher," encouraging exploration, curiosity, and a
-                            love
-                            for learning that lasts a lifetime.</p>
+                        <h2 class="section-title text-playful multicolor-text">Philosophy At a Glance</h2>
+                        <p class="lead">We believe that every child is a <strong>unique individual</strong>.</p>
+                        <p class="body-text">At Happy Tods, we provide a <strong>warm and secure</strong> environment
+                            where the <strong>importance of play</strong> and <strong>cognitive stimulation</strong> are
+                            at the heart of everything we do. Our Reggio Emilia inspired approach encourages exploration
+                            and curiosity.</p>
                     </div>
                     <!-- Placeholder for a warm image if available, otherwise structural layout -->
                     <div class="about-decoration">
@@ -93,10 +100,33 @@
             </div>
         </section>
 
+        <!-- Trust & Heritage Section (Cream/Warm Background) -->
+        <section class="section heritage-section">
+            <div class="container">
+                <div class="heritage-grid">
+                    <div class="heritage-item">
+                        <span class="heritage-icon">🏠</span>
+                        <h3>Community-Driven</h3>
+                        <p>A local Chennai kindergarten your children will love, deeply rooted in our community.</p>
+                    </div>
+                    <div class="heritage-item">
+                        <span class="heritage-icon">📅</span>
+                        <h3>10+ Years of Care</h3>
+                        <p>Providing exceptional early childhood education for over a decade in Chennai.</p>
+                    </div>
+                    <div class="heritage-item">
+                        <span class="heritage-icon">⭐</span>
+                        <h3>Meeting NQS</h3>
+                        <p>A&R Rating: Meeting National Quality Standards for peace of mind.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Why Parents Choose Us (Muted Blue Background) -->
         <section id="difference" class="section difference-section">
             <div class="container">
-                <h2 class="section-title text-center text-white">Why Parents Choose Us</h2>
+                <h2 class="section-title text-center text-white text-playful">Why Parents Choose Us</h2>
 
                 <div class="features-grid">
                     <!-- 1. Environment -->
@@ -123,10 +153,22 @@
             </div>
         </section>
 
+        <!-- Positive Approach Section (Soft White Background) -->
+        <section class="section positive-approach">
+            <div class="container">
+                <div class="approach-content text-center">
+                    <h2 class="section-title text-playful multicolor-text">A Positive Approach</h2>
+                    <p class="cta-text">We focus on building each child's <strong>self-image, independence, and belief
+                            in oneself</strong>. Our nurturing environment empowers young learners to grow with
+                        confidence and resilience.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- Admissions / Call to Action -->
         <section id="admissions" class="section admissions-section">
             <div class="container text-center">
-                <h2 class="section-title">Start Your Journey With Us</h2>
+                <h2 class="section-title text-playful multicolor-text">Start Your Journey With Us</h2>
                 <p class="cta-text">Enrollments are open for the upcoming academic year. Schedule a visit to experience
                     our
                     warm environment firsthand.</p>
@@ -139,7 +181,7 @@
             <div class="container">
                 <div class="contact-wrapper">
                     <div class="contact-info">
-                        <h2 class="section-title">Visit Our Campus</h2>
+                        <h2 class="section-title text-playful multicolor-text">Visit Our Campus</h2>
                         <p class="address">
                             <strong>Happy Tods Perambur</strong><br>
                             7 Stephenson Road, Binny Garden,<br>

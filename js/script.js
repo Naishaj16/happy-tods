@@ -51,4 +51,16 @@ document.addEventListener('DOMContentLoaded', () => {
         el.classList.add('fade-in-up');
         observer.observe(el);
     });
+
+    // Multicolor Text Helper
+    const multicolorElements = document.querySelectorAll('.multicolor-text');
+    multicolorElements.forEach(el => {
+        const text = el.innerText;
+        el.innerHTML = '';
+        [...text].forEach(char => {
+            const span = document.createElement('span');
+            span.innerText = char;
+            el.appendChild(span);
+        });
+    });
 });
