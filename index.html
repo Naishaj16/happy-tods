@@ -4,178 +4,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Tots | A Happy Place for Little Learners to Grow</title>
-    <!-- Google Fonts: Poppins (Headings), Inter (Body) -->
+    <title>Happy Tods | International Early Learning Center</title>
+
+    <!-- Google Fonts: Nunito (Headings), Inter (Body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&family=Nunito:wght@400;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Nunito:wght@600;700;800&display=swap"
         rel="stylesheet">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- Header / Navigation -->
+    <!-- Navigation -->
     <nav class="navbar">
-        <div class="container navbar-content">
-            <div class="logo">
-                <a href="#home" class="logo-link">
-                    <div class="logo-wordmark">Happy Tots</div>
-                    <div class="logo-subtitle">Kindergarten</div>
-                </a>
-            </div>
-            <ul class="nav-links" id="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#why-us">About Us</a></li>
-                <li><a href="#programmes">Programmes</a></li>
-                <li><a href="#approach">Why Us</a></li>
-                <li><a href="#location">Our Campuses</a></li>
-                <li><a href="#contact">Contact</a></li>
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <img src="assets/images/logo.jpg" alt="Happy Tods Logo" class="nav-logo"
+                    style="height: 50px; border-radius: 8px;">
+                <span>Happy Tods</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="programmes.html">Programmes</a></li>
+                <li><a href="why-us.html">Why Happy Tots</a></li>
+                <li><a href="campuses.html">Campuses (Chennai)</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="nav-btns">
-                <a href="#contact" class="btn-admissions">Admissions</a>
-                <a href="#contact" class="btn-franchise">Franchise</a>
+
+            <div class="nav-actions">
+                <a href="#admissions" class="btn btn-primary">Admissions</a>
             </div>
-            <div class="mobile-menu-btn" id="mobile-toggle">☰</div>
         </div>
     </nav>
 
-    <!-- 1️⃣ HERO SECTION -->
-    <header id="home" class="hero-section">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <h1>A Happy Place for Little Learners to Grow 🌈</h1>
-                <p>At Happy Tots, we create joyful early learning experiences where children feel safe, curious, and
-                    confident every day.</p>
-                <div class="hero-btns">
-                    <a href="#contact" class="btn btn-peach">Book a Visit</a>
-                    <a href="#programmes" class="btn btn-outline">Explore Our Programmes</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="image-placeholder main-hero-img">
-                    <!-- Placeholder for warm classroom image -->
-                    <img src="assets/images/hero-fallback.png" alt="Happy Tots Classroom"
-                        onerror="this.src='https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&q=80&w=800'">
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- 2️⃣ WHY HAPPY TOTS -->
-    <section id="why-us" class="section why-section">
-        <div class="container">
-            <h2 class="section-title text-center">Why Happy Tots</h2>
-            <div class="cards-grid">
-                <div class="card rounded-card">
-                    <div class="card-icon">🏠</div>
-                    <h3>Home-like learning spaces</h3>
-                    <p>Environments designed to feel warm and familiar.</p>
-                </div>
-                <div class="card rounded-card">
-                    <div class="card-icon">🌍</div>
-                    <h3>Play-based international curriculum</h3>
-                    <p>Combining global standards with the joy of play.</p>
-                </div>
-                <div class="card rounded-card">
-                    <div class="card-icon">👩‍🏫</div>
-                    <h3>Caring & trained educators</h3>
-                    <p>Dedicated teachers who nurture every child's potential.</p>
-                </div>
-                <div class="card rounded-card">
-                    <div class="card-icon">💬</div>
-                    <h3>Transparent parent communication</h3>
-                    <p>Keeping you involved in every step of their journey.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3️⃣ OUR APPROACH -->
-    <section id="approach" class="section approach-section">
-        <div class="container text-center">
-            <h2 class="section-title">Our Approach</h2>
-            <div class="calm-paragraph">
-                <p>We believe in <strong>play-based learning</strong> that fosters <strong>emotional
-                        development</strong> alongside academic foundations. Our environment is designed to spark
-                    <strong>creativity and curiosity</strong>, providing a <strong>safe nurturing environment</strong>
-                    where children thrive naturally.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4️⃣ PROGRAMMES OVERVIEW -->
-    <section id="programmes" class="section programmes-section">
-        <div class="container">
-            <h2 class="section-title text-center">Our Programmes</h2>
-            <div class="programmes-grid">
-                <div class="prog-card toddlers">
-                    <span class="age-tag">1.5–2.5 years</span>
-                    <h3>Toddlers</h3>
-                    <p>Fostering independence and sensory exploration in a safe space.</p>
-                </div>
-                <div class="prog-card nursery">
-                    <span class="age-tag">2.5–4 years</span>
-                    <h3>Nursery</h3>
-                    <p>Developing social skills and foundational literacy through play.</p>
-                </div>
-                <div class="prog-card kindergarten">
-                    <span class="age-tag">4–6 years</span>
-                    <h3>Kindergarten</h3>
-                    <p>Preparing confident learners for their transition to primary school.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5️⃣ CHENNAI LOCATION & TRUST -->
-    <section id="location" class="section location-section">
-        <div class="container">
-            <div class="location-content">
-                <div class="location-text">
-                    <h2 class="section-title">Happy Tots Chennai</h2>
-                    <p>Located in the heart of Chennai, our safe campus is designed with child-friendly classrooms to
-                        ensure every parent has peace of mind while their little ones learn and grow.</p>
-                    <ul class="trust-list">
-                        <li>📍 Located in Chennai</li>
-                        <li>🛡️ Safe campus</li>
-                        <li>🎨 Child-friendly classrooms</li>
-                        <li>❤️ Parent peace of mind</li>
-                    </ul>
-                </div>
-                <div class="location-map">
-                    <div class="image-placeholder">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.836484393649!2d80.2396!3d13.1098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265e3174246ab%3A0x36853755452f3068!2sNorth%20Town%20Estate%20Adyar%20Ananda%20Bhavan%20A2B!5e0!3m2!1sen!2sin!4v1645000000000!5m2!1sen!2sin"
-                            width="100%" height="300" style="border:0; border-radius: 20px;" allowfullscreen=""
-                            loading="lazy"></iframe>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <span class="hero-tag">Enrolling for 2026</span>
+                        <h1 class="hero-title">A Warm Start for Your Child's <span
+                                style="color: var(--color-green);">Journey</span></h1>
+                        <p class="hero-desc">Experience an international standard of early childhood education where
+                            every child's curiosity is nurtured in a safe, premium environment.</p>
+                        <div class="hero-btns">
+                            <a href="#book-tour" class="btn btn-primary">Book a Campus Tour</a>
+                            <a href="#philosophy" class="btn btn-secondary" style="margin-left: 15px;">Our
+                                Philosophy</a>
+                        </div>
+                    </div>
+                    <div class="hero-image-container">
+                        <img src="assets/images/kids_playing.png" alt="Happy Tods Kids Playing" class="hero-image">
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 6️⃣ FINAL CALL TO ACTION -->
-    <section id="contact" class="section cta-section">
-        <div class="container">
-            <div class="cta-box text-center">
-                <h2>Ready to begin your child’s happy learning journey?</h2>
-                <div class="cta-btns">
-                    <a href="tel:9566033393" class="btn btn-peach">Schedule a Visit</a>
-                    <a href="mailto:todshappy@gmail.com" class="btn btn-outline">Contact Us</a>
+        <!-- Our Philosophy Section -->
+        <section id="philosophy" class="section secondary-bg">
+            <div class="container text-center">
+                <h2 class="section-title mb-20" style="font-size: 2.5rem;">The Heart of Our Teaching</h2>
+                <p class="section-desc" style="max-width: 700px; margin: 0 auto 60px;">Inspired by the world's best
+                    early childhood practices, we focus on play-based learning that respects each child's individual
+                    pace.</p>
+
+                <div class="philosophy-grid">
+                    <div class="feature-card">
+                        <div class="icon-box" style="background-color: var(--color-primary);">🌱</div>
+                        <h3>Natural Desire</h3>
+                        <p>Activating a child's natural desire to learn through purposeful play and exploration.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-box" style="background-color: var(--color-secondary);">🤝</div>
+                        <h3>Nurturing Trust</h3>
+                        <p>Building strong foundations of trust and security between teachers, children, and parents.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-box" style="background-color: var(--color-green);">⭐</div>
+                        <h3>Elite Standard</h3>
+                        <p>Meeting international quality standards to ensure your child receives the best care possible.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer class="footer">
-        <div class="container text-center">
-            <p>&copy; 2026 Happy Tots Kindergarten, Chennai. All Rights Reserved.</p>
-        </div>
-    </footer>
+        <!-- CTAs / Multi-page Teaser -->
+        <section class="section">
+            <div class="container">
+                <div class="cta-banner">
+                    <div class="cta-text">
+                        <h2>Explore Our Programmes</h2>
+                        <p>From Toddlers to Kindergarten, we have specialized curricula for every stage.</p>
+                    </div>
+                    <a href="programmes.html" class="btn btn-white">View Programmes</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
+    <!-- Footer (Coming next) -->
+
+    <!-- Scripts -->
     <script src="js/script.js"></script>
 </body>
 
